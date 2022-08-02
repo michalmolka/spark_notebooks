@@ -1,0 +1,5 @@
+databricks jobs list
+databricks jobs get --job-id <job-number>
+databricks jobs run-now --job-id <job-number>
+databricks runs list
+databricks runs get --run-id <rnu-number>
