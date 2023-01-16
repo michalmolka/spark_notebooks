@@ -3,3 +3,13 @@ databricks jobs get --job-id <job-number>
 databricks jobs run-now --job-id <job-number>
 databricks runs list
 databricks runs get --run-id <rnu-number>
+databricks workspace list --absolute --long --id /ETL_DBR
+databricks workspace mkdirs "/ETL_DBR_SECOND"
+databricks workspace export_dir /ETL_DBR ./ETL_DBR_LOCAL_COPY
+databricks workspace import_dir ./ETL_DBR_LOCAL_COPY /ETL_DBR_SECOND
+databricks clusters list
+databricks clusters list --output JSON
+databricks clusters start --cluster-id <cluster_id>
+databricks clusters restart --cluster-id <cluster_id>
+databricks clusters delete --cluster-id <cluster_id>
+databricks clusters edit --ison-file ./Cluster_New_Configuuration 
